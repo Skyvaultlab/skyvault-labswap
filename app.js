@@ -62,3 +62,28 @@ async function fetchSCGPrice() {
 // Initialize
 fetchSCGPrice();
 setInterval(fetchSCGPrice, 30000); // Update every 30 seconds
+// Realtime APR Calculation (Mock)
+function updateAPR() {
+  // This would connect to your backend later
+  const baseAPR = 420;
+  const randomFluctuation = (Math.random() * 20 - 10);
+  const currentAPR = (baseAPR + randomFluctuation).toFixed(2);
+  
+  document.getElementById('lp-apr').textContent = currentAPR;
+  
+  // Simulate real-time updates
+  setTimeout(updateAPR, 30000);
+}
+
+// Initialize
+updateAPR();
+
+// Mobile Menu Toggle
+document.getElementById('mobile-menu').addEventListener('click', () => {
+  document.querySelector('.nav-links').classList.toggle('active');
+});
+
+// Wallet Placeholder (Backend will replace this)
+document.getElementById('wallet-connect').addEventListener('click', () => {
+  alert("Wallet connection will be implemented with backend");
+});
