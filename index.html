@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>SkyVault Labs - Token Swap</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="app-header">
+    <h1>SkyVault Labs</h1>
+    <nav>
+      <button class="connect-wallet">Connect Wallet</button>
+    </nav>
+  </header>
+
+  <main class="swap-container">
+    <section class="swap-interface">
+      <div class="swap-header">
+        <h2>Token Swap</h2>
+        <button class="settings-btn" aria-label="Swap settings">⚙️</button>
+      </div>
+      
+      <!-- SCG/WMATIC Swap -->
+      <div class="swap-box active">
+        <div class="token-input">
+          <label for="from-amount">You pay</label>
+          <div class="input-group">
+            <input type="number" id="from-amount" placeholder="0.0" />
+            <div class="token-selector">
+              <span class="token-symbol">SCG</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="swap-arrow">↓</div>
+        
+        <div class="token-input">
+          <label for="to-amount">You receive</label>
+          <div class="input-group">
+            <input type="number" id="to-amount" placeholder="0.0" readonly />
+            <div class="token-selector">
+              <span class="token-symbol">WMATIC</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="price-info">
+          <p>Live Price: <span id="live-price">1 SCG = 0.025 WMATIC</span></p>
+          <p>Slippage: <span>0.5%</span></p>
+        </div>
+        
+        <button class="swap-button">Swap</button>
+      </div>
+      
+      <!-- SCG/USDC Swap (Coming Soon) -->
+      <div class="swap-box disabled">
+        <div class="coming-soon-overlay">
+          <span>Coming Soon</span>
+        </div>
+        <div class="token-input">
+          <label>You pay</label>
+          <div class="input-group">
+            <input type="number" placeholder="0.0" disabled />
+            <div class="token-selector">
+              <span class="token-symbol">SCG</span>
+            </div>
+          </div>
+        </div>
+        
+        <div class="swap-arrow">↓</div>
+        
+        <div class="token-input">
+          <label>You receive</label>
+          <div class="input-group">
+            <input type="number" placeholder="0.0" disabled />
+            <div class="token-selector">
+              <span class="token-symbol">USDC</span>
+            </div>
+          </div>
+        </div>
+        
+        <button class="swap-button" disabled>Swap</button>
+      </div>
+    </section>
+  </main>
+
+  <footer class="app-footer">
+    <p>© 2023 SkyVault Labs. All rights reserved.</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
