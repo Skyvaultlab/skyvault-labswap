@@ -96,3 +96,85 @@
     <span class="crypto-item"><img src="https://cryptologos.cc/logos/ethereum-eth-logo.png" alt="ETH" class="crypto-icon"> ETH: $3,450</span>
   </div>
 </div>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyVault Labs | Next-Gen DEX</title>
+  <link rel="stylesheet" href="styles.css">
+  <!-- Three.js for 3D effects -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+</head>
+<body>
+  <!-- 3D Particle Background -->
+  <div id="particle-container"></div>
+
+  <!-- Holographic UI Container -->
+  <div class="holo-ui">
+    <!-- Neuro-Interface Header -->
+    <header class="neuro-header">
+      <div class="logo-holo">
+        <img src="skyvault-logo-3d.png" alt="SkyVault" class="logo-pulse">
+        <h1 class="holographic-text">SKYVAULT LABS</h1>
+      </div>
+      <button class="cyber-wallet">
+        <span class="glow"></span>
+        CONNECT WALLET
+      </button>
+    </header>
+
+    <!-- Quantum Swap Interface -->
+    <main class="quantum-swap">
+      <div class="ticker-holo">
+        <div class="crypto-data">
+          <span class="asset" data-token="btc">BTC: $64,280 ▲2.4%</span>
+          <span class="asset" data-token="eth">ETH: $3,520 ▲1.8%</span>
+          <span class="asset" data-token="scg">SCG: $0.42 ▼0.3%</span>
+        </div>
+      </div>
+
+      <div class="swap-holo">
+        <div class="input-holo">
+          <label>YOU PAY</label>
+          <div class="input-field">
+            <input type="number" placeholder="0.0" class="neuro-input">
+            <div class="token-badge">
+              <span class="token-3d">SCG</span>
+              <span class="balance">Balance: 420.69</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="swap-arrow-holo">
+          ↓
+        </div>
+
+        <div class="output-holo">
+          <label>YOU RECEIVE</label>
+          <div class="output-field">
+            <input type="number" placeholder="0.0" readonly class="neuro-output">
+            <div class="token-badge">
+              <span class="token-3d">WMATIC</span>
+              <span class="balance">Balance: 1,337.42</span>
+            </div>
+          </div>
+        </div>
+
+        <button class="quantum-swap-btn">
+          <span class="particle-ring"></span>
+          INITIATE QUANTUM SWAP
+        </button>
+      </div>
+    </main>
+
+    <!-- Holographic Mascot -->
+    <div class="mascot-holo">
+      <img src="mascot-hologram.png" alt="SkyVault Mascot" class="mascot-3d">
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+  <script src="three-init.js"></script>
+</body>
+</html>
