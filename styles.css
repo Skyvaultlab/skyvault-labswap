@@ -444,3 +444,17 @@ body {
   max-width: 300px;
   filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.5));
 }
+@media (max-width: 600px) {
+  .cyber-header {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .swap-card {
+    padding: 1.5rem;
+  }
+  
+  .mascot-hologram {
+    max-width: 200px;
+  }
+}
