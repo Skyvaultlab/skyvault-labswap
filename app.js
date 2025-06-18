@@ -6,3 +6,8 @@ function animateTicker() {
 
 // Initialize
 animateTicker();
+// Ensure this runs after DOM loads
+document.addEventListener('DOMContentLoaded', function() {
+  const ticker = document.querySelector('.ticker-content');
+  ticker.style.animation = 'scroll 30s linear infinite';
+});
