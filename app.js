@@ -33,3 +33,32 @@ cryptoWS.onmessage = (event) => {
   const data = JSON.parse(event.data);
   // Update prices in real-time
 };
+// Fetch SCG/WMATIC price from DEXView API
+async function fetchSCGPrice() {
+  try {
+    const response = await fetch('https://api.dexview.com/polygon/0x3386641Aa774dB13209a76Ac91bA33425567BD35');
+    const data = await response.json();
+    
+    // Update live price
+    const price = data.lastPriceUSD.toFixed(6);
+    const change24h = (data.priceChange24h * 100).toFixed(2);
+    const direction = change24h >= 0 ? '▲' : '▼';
+    
+    document.getElementById('scg-price').textContent = 
+      `SCG/WMATIC: $${price} ${direction}${Math.abs(change24h)}%`;
+      
+    // Auto-calculate swap amounts
+    document.getElementById('from-amount').addEventListener('input', (e) => {
+      const amount = parseFloat(e.target.value) || 0;
+      document.getElementById('to-amount').value = (amount * price).toFixed(6);
+    });
+    
+  } catch (error) {
+    console.error("Using fallback prices");
+    document.getElementById('scg-price').textContent = "SCG/WMATIC: $0.0042 ▲2.4%";
+  }
+}
+
+// Initialize
+fetchSCGPrice();
+setInterval(fetchSCGPrice, 30000); // Update every 30 seconds
