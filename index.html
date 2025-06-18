@@ -1,101 +1,72 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>SkyVault Labs - Token Swap</title>
-  <link rel="stylesheet" href="styles.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyVault Labs | SCG Swap</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+  <!-- Gold/Black Header -->
   <header class="app-header">
-    <h1>SkyVault Labs</h1>
-    <nav>
-      <button class="connect-wallet">Connect Wallet</button>
-    </nav>
+    <div class="logo-container">
+      <img src="skyvaultlogo.png" alt="SkyVault Labs" class="logo">
+      <h1>SkyVault Labs</h1>
+    </div>
+    <button class="connect-wallet">Connect Wallet</button>
   </header>
 
+  <!-- Crypto Price Ticker -->
+  <div class="crypto-ticker">
+    <div class="ticker-content">
+      <span class="crypto-item">BTC: $64,200</span>
+      <span class="crypto-item">ETH: $3,450</span>
+      <span class="crypto-item">BNB: $580</span>
+      <span class="crypto-item">MATIC: $0.72</span>
+    </div>
+  </div>
+
+  <!-- Swap Interface -->
   <main class="swap-container">
     <section class="swap-interface">
       <div class="swap-header">
-        <h2>Token Swap</h2>
-        <button class="settings-btn" aria-label="Swap settings">⚙️</button>
+        <h2>SCG/WMATIC Swap</h2>
       </div>
       
-      <!-- SCG/WMATIC Swap -->
-      <div class="swap-box active">
-        <div class="token-input">
-          <label for="from-amount">You pay</label>
-          <div class="input-group">
-            <input type="number" id="from-amount" placeholder="0.0" />
-            <div class="token-selector">
-              <span class="token-symbol">SCG</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="swap-arrow">↓</div>
-        
-        <div class="token-input">
-          <label for="to-amount">You receive</label>
-          <div class="input-group">
-            <input type="number" id="to-amount" placeholder="0.0" readonly />
-            <div class="token-selector">
-              <span class="token-symbol">WMATIC</span>
-            </div>
-          </div>
-        </div>
-        
-        <div class="price-info">
-          <p>Live Price: <span id="live-price">1 SCG = 0.025 WMATIC</span></p>
-          <p>Slippage: <span>0.5%</span></p>
-        </div>
-        
-        <button class="swap-button">Swap</button>
-      </div>
-      
-      <!-- SCG/USDC Swap (Coming Soon) -->
-      <div class="swap-box disabled">
-        <div class="coming-soon-overlay">
-          <span>Coming Soon</span>
-        </div>
+      <div class="swap-box">
         <div class="token-input">
           <label>You pay</label>
           <div class="input-group">
-            <input type="number" placeholder="0.0" disabled />
-            <div class="token-selector">
-              <span class="token-symbol">SCG</span>
-            </div>
+            <input type="number" placeholder="0.0">
+            <div class="token-selector">SCG</div>
           </div>
         </div>
-        
+
         <div class="swap-arrow">↓</div>
-        
+
         <div class="token-input">
           <label>You receive</label>
           <div class="input-group">
-            <input type="number" placeholder="0.0" disabled />
-            <div class="token-selector">
-              <span class="token-symbol">USDC</span>
-            </div>
+            <input type="number" placeholder="0.0" readonly>
+            <div class="token-selector">WMATIC</div>
           </div>
         </div>
-        
-        <button class="swap-button" disabled>Swap</button>
+
+        <button class="swap-button">Swap</button>
       </div>
     </section>
+
+    <!-- Mascot Display -->
+    <div class="mascot-container">
+      <img src="mascot1.png" alt="SkyVault Mascot" class="mascot">
+    </div>
   </main>
 
+  <!-- Footer -->
   <footer class="app-footer">
-    <p>© 2023 SkyVault Labs. All rights reserved.</p>
+    <p>© 2025 SkyVault Labs. All rights reserved.</p>
   </footer>
 
   <script src="app.js"></script>
 </body>
 </html>
-<!-- Old code -->
-<img src="logo.png" alt="SkyVault Labs" class="logo" />
-<img src="mascot.png" alt="SkyVault Mascot" class="mascot" />
-
-<!-- New code -->
-<img src="1000027102.jpg" alt="SkyVault Labs" class="logo" />
-<img src="1000027550.png" alt="SkyVault Mascot" class="mascot" />
