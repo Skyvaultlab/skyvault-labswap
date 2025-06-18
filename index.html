@@ -178,3 +178,90 @@
   <script src="three-init.js"></script>
 </body>
 </html>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyVault Labs | SCG Swap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Cyberpunk Header -->
+  <header class="cyber-header">
+    <div class="logo-glitch">
+      <img src="skyvault-logo.png" alt="SkyVault">
+      <h1 data-text="SKYVAULT_LABS">SKYVAULT_LABS</h1>
+    </div>
+    <button class="cyber-wallet">
+      <span class="glow"></span>
+      CONNECT_WALLET
+    </button>
+  </header>
+
+  <!-- Main Grid -->
+  <main class="dex-grid">
+    <!-- Live Price Ticker -->
+    <section class="price-ticker">
+      <div class="ticker-scroll">
+        <span class="crypto-glitch" id="scg-price">SCG/WMATIC: $0.0042 ▲2.4%</span>
+        <span class="crypto-glitch">BTC: $64,280 ▲1.8%</span>
+        <span class="crypto-glitch">ETH: $3,520 ▲0.9%</span>
+      </div>
+    </section>
+
+    <!-- Swap Interface -->
+    <section class="swap-interface">
+      <div class="swap-tabs">
+        <button class="active">SCG/WMATIC</button>
+        <button disabled>SCG/USDC (COMING_SOON)</button>
+      </div>
+      
+      <div class="swap-container">
+        <div class="input-holo">
+          <label>YOU_PAY</label>
+          <div class="input-field">
+            <input type="number" placeholder="0.0" id="from-amount">
+            <div class="token-select">
+              <span>SCG</span>
+              <small>Balance: <span id="scg-balance">0.00</span></small>
+            </div>
+          </div>
+        </div>
+
+        <div class="swap-arrow">⇅</div>
+
+        <div class="output-holo">
+          <label>YOU_RECEIVE</label>
+          <div class="output-field">
+            <input type="number" placeholder="0.0" id="to-amount" readonly>
+            <div class="token-select">
+              <span>WMATIC</span>
+              <small>Balance: <span id="wmatic-balance">0.00</span></small>
+            </div>
+          </div>
+        </div>
+
+        <button class="swap-btn" id="swap-button">
+          EXECUTE_SWAP
+        </button>
+      </div>
+    </section>
+
+    <!-- Staking Section -->
+    <section class="staking-interface">
+      <h2>QUANTUM_STAKING</h2>
+      <div class="staking-card">
+        <h3>SCG/WMATIC_LP</h3>
+        <div class="apr-display">
+          <span class="apr-glitch">APR: 420.69%</span>
+        </div>
+        <button class="stake-btn">STAKE_LP_TOKENS</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
