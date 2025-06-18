@@ -105,3 +105,15 @@ body {
   color: #FFD700;
   font-size: 1.5rem;
 }
+/* For logo */
+.logo {
+  width: 200px;  /* Fixed width */
+  height: auto;  /* Maintain aspect ratio */
+}
+
+/* For mascot */
+.mascot {
+  max-width: 100%;  /* Responsive */
+  height: auto;
+  width: 400px;     /* Max size */
+}
