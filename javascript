@@ -15,3 +15,13 @@ document.addEventListener('DOMContentLoaded', function() {
     };
   });
 });
+// Add this to app.js to verify image loading
+document.addEventListener('DOMContentLoaded', () => {
+  const images = ['logo.png', 'mascot.png', 'SCG-coin.png', 'background.jpg'];
+  
+  images.forEach(img => {
+    const imgEl = new Image();
+    imgEl.src = img;
+    imgEl.onerror = () => console.error(`Failed to load: ${img}`);
+  });
+});
