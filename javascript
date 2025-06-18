@@ -28,3 +28,6 @@ document.addEventListener('DOMContentLoaded', () => {
 const speechRecognition = new webkitSpeechRecognition();
 speechRecognition.onresult = (e) => executeSwap(e.results[0][0].transcript);
 navigator.xr.requestSession('immersive-ar');
+// Animate price ticker
+const ticker = document.querySelector('.ticker-scroll');
+ticker.style.animation = 'scroll 30s linear infinite';
