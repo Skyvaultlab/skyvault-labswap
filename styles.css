@@ -392,3 +392,55 @@ h1, h2 {
     animation: pulse 1.5s infinite;
   }
 }
+/* Core Cyberpunk Theme */
+:root {
+  --neon-gold: #FFD700;
+  --cyber-black: #0a0a12;
+  --hologram-blue: #00f0ff;
+}
+
+body {
+  background: var(--cyber-black);
+  color: var(--neon-gold);
+  font-family: 'Orbitron', sans-serif;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* Simplified Header */
+.cyber-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 0;
+  border-bottom: 1px solid var(--neon-gold);
+}
+
+/* Consolidated Ticker */
+.ticker {
+  background: rgba(0, 240, 255, 0.1);
+  padding: 0.5rem;
+  margin: 1rem 0;
+  border-left: 3px solid var(--hologram-blue);
+}
+
+/* Clean Swap Card */
+.swap-card {
+  background: rgba(10, 10, 20, 0.8);
+  border: 1px solid var(--neon-gold);
+  border-radius: 12px;
+  padding: 2rem;
+  margin: 2rem 0;
+}
+
+/* Mascot as Visual Focus */
+.mascot-display {
+  text-align: center;
+  margin: 2rem 0;
+}
+
+.mascot-hologram {
+  max-width: 300px;
+  filter: drop-shadow(0 0 15px rgba(0, 240, 255, 0.5));
+}
