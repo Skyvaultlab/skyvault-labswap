@@ -149,3 +149,101 @@ body {
   text-align: center;
   margin-top: 30px;
 }
+/* ===== CROSS-PLATFORM STYLES ===== */
+:root {
+  --primary: #FFD700;
+  --secondary: #000;
+  --accent: #00f0ff;
+  --text: #e0e0e0;
+  --card-bg: rgba(15, 15, 25, 0.8);
+}
+
+/* Mobile First Design */
+body {
+  font-family: 'Roboto', sans-serif;
+  background: var(--secondary);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+}
+
+.app-header {
+  padding: 1rem;
+  border-bottom: 1px solid var(--primary);
+}
+
+.header-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.logo {
+  height: 40px;
+}
+
+/* Swap Container */
+.swap-section {
+  background: var(--card-bg);
+  border-radius: 16px;
+  padding: 1.5rem;
+  margin: 1rem auto;
+  max-width: 500px;
+  border: 1px solid var(--primary);
+}
+
+/* Staking Cards */
+.staking-card {
+  display: flex;
+  background: var(--card-bg);
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 1rem 0;
+  border: 1px solid var(--accent);
+}
+
+.token-img {
+  width: 40px;
+  height: 40px;
+  margin-right: -10px;
+}
+
+/* APR Display */
+.apr-value {
+  color: var(--primary);
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+/* Desktop Overrides */
+@media (min-width: 768px) {
+  .app-container {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+  }
+
+  .swap-section {
+    grid-column: 1;
+  }
+
+  .staking-section {
+    grid-column: 2;
+  }
+}
+
+/* Mobile Tweaks */
+@media (max-width: 480px) {
+  .staking-card {
+    flex-direction: column;
+  }
+  
+  .token-pair {
+    margin-bottom: 1rem;
+  }
+}
