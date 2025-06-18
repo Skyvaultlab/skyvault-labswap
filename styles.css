@@ -309,3 +309,38 @@ body {
 .token-icon:hover {
   transform: rotate(15deg);
 }
+/* Ensure images don't overflow */
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Background */
+.bg-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: -1;
+}
+
+.bg-image {
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+  opacity: 0.2; /* Adjust transparency */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+  .logo {
+    width: 140px !important;
+    height: auto !important;
+  }
+  
+  .mascot {
+    max-width: 250px;
+  }
+}
