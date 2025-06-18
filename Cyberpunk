@@ -72,3 +72,51 @@ body {
 }
 
 /* ... (additional futuristic styles) ... */
+/* === CYBERPUNK THEME === */
+:root {
+  --neon-blue: #00f0ff;
+  --neon-pink: #ff00aa;
+  --matrix-green: #00ff4c;
+  --cyber-black: #0a0a12;
+  --hologram-gold: rgba(255,215,0,0.8);
+}
+
+body {
+  background: var(--cyber-black);
+  color: var(--hologram-gold);
+  font-family: 'Orbitron', sans-serif;
+}
+
+.dex-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.swap-interface {
+  border: 1px solid var(--neon-blue);
+  box-shadow: 0 0 20px rgba(0, 240, 255, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+.staking-interface {
+  border: 1px solid var(--neon-pink);
+  box-shadow: 0 0 20px rgba(255, 0, 170, 0.3);
+  border-radius: 12px;
+  padding: 2rem;
+}
+
+/* Glitch Effects */
+.crypto-glitch {
+  animation: glitch 1s linear infinite;
+}
+
+@keyframes glitch {
+  0% { text-shadow: 2px 0 var(--neon-blue); }
+  20% { text-shadow: -2px 0 var(--neon-pink); }
+  40%,100% { text-shadow: none; }
+}
