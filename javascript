@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     imgEl.onerror = () => console.error(`Failed to load: ${img}`);
   });
 });
+const speechRecognition = new webkitSpeechRecognition();
+speechRecognition.onresult = (e) => executeSwap(e.results[0][0].transcript);
