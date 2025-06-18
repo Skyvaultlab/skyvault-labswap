@@ -1,185 +1,58 @@
-/* Base Styles */
+/* Gold/Black Theme */
+:root {
+  --gold: #FFD700;
+  --black: #000000;
+  --dark: #121212;
+}
+
 body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  padding: 0;
-  background-color: #f5f7fa;
-  color: #333;
+  background: var(--black);
+  color: var(--gold);
+  font-family: 'Arial', sans-serif;
 }
 
 .app-header {
+  background: var(--dark);
+  padding: 1rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1rem 2rem;
-  background-color: #1e293b;
-  color: white;
+  border-bottom: 2px solid var(--gold);
 }
 
-.connect-wallet {
-  background-color: #3b82f6;
-  color: white;
-  border: none;
-  padding: 0.5rem 1rem;
-  border-radius: 0.5rem;
-  cursor: pointer;
-  font-weight: bold;
-}
-
-.swap-container {
-  max-width: 500px;
-  margin: 2rem auto;
-  padding: 0 1rem;
-}
-
-.swap-interface {
-  background-color: white;
-  border-radius: 1rem;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-  padding: 1.5rem;
-}
-
-.swap-header {
+.logo-container {
   display: flex;
-  justify-content: space-between;
   align-items: center;
-  margin-bottom: 1.5rem;
 }
 
-.swap-header h2 {
-  margin: 0;
-  font-size: 1.5rem;
-}
-
-.settings-btn {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
-  cursor: pointer;
+.logo {
+  height: 40px;
+  margin-right: 1rem;
 }
 
 .swap-box {
-  position: relative;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.75rem;
+  background: var(--dark);
+  border: 1px solid var(--gold);
+  border-radius: 12px;
   padding: 1.5rem;
-  margin-bottom: 1.5rem;
-}
-
-.swap-box.disabled {
-  opacity: 0.6;
-}
-
-.coming-soon-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  background-color: rgba(255, 255, 255, 0.8);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 10;
-}
-
-.coming-soon-overlay span {
-  background-color: #3b82f6;
-  color: white;
-  padding: 0.5rem 1rem;
-  border-radius: 1rem;
-  font-weight: bold;
-}
-
-.token-input {
-  margin-bottom: 1rem;
-}
-
-.token-input label {
-  display: block;
-  margin-bottom: 0.5rem;
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-.input-group {
-  display: flex;
-  border: 1px solid #e2e8f0;
-  border-radius: 0.5rem;
-  overflow: hidden;
-}
-
-.input-group input {
-  flex: 1;
-  border: none;
-  padding: 0.75rem;
-  font-size: 1.2rem;
-  outline: none;
-}
-
-.token-selector {
-  display: flex;
-  align-items: center;
-  padding: 0 1rem;
-  background-color: #f8fafc;
-  font-weight: bold;
-}
-
-.swap-arrow {
-  text-align: center;
   margin: 1rem 0;
-  font-size: 1.5rem;
-  color: #64748b;
-}
-
-.price-info {
-  margin: 1.5rem 0;
-  font-size: 0.9rem;
-  color: #64748b;
-}
-
-.price-info p {
-  margin: 0.5rem 0;
 }
 
 .swap-button {
+  background: var(--gold);
+  color: var(--black);
   width: 100%;
-  padding: 1rem;
-  background-color: #3b82f6;
-  color: white;
+  padding: 12px;
   border: none;
-  border-radius: 0.5rem;
-  font-size: 1.1rem;
+  border-radius: 8px;
   font-weight: bold;
-  cursor: pointer;
-  transition: background-color 0.2s;
+  margin-top: 1rem;
 }
 
-.swap-button:hover {
-  background-color: #2563eb;
-}
-
-.swap-button:disabled {
-  background-color: #cbd5e1;
-  cursor: not-allowed;
-}
-
-.app-footer {
-  text-align: center;
-  padding: 1rem;
-  color: #64748b;
-  font-size: 0.9rem;
-}
-/* Logo sizing */
-.logo {
-  height: 50px;
-  margin-right: 15px;
-}
-
-/* Mascot styling */
 .mascot {
-  max-height: 180px;
-  border: 3px solid #FFD700;
+  max-width: 200px;
+  border: 3px solid var(--gold);
   border-radius: 16px;
-  margin: 20px 0;
+  display: block;
+  margin: 2rem auto;
 }
