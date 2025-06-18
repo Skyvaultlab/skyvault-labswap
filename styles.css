@@ -344,3 +344,37 @@ img {
     max-width: 250px;
   }
 }
+:root {
+  --neon-gold: #FFD700;
+  --cyber-black: #0a0a0f;
+  --hologram-blue: #00f0ff;
+}
+
+body {
+  background: radial-gradient(circle at center, #1a1a2e 0%, var(--cyber-black) 100%);
+  color: var(--neon-gold);
+  font-family: 'Orbitron', sans-serif;
+}
+
+/* Holographic UI Panels */
+.swap-interface, .staking-section {
+  background: rgba(10, 10, 20, 0.8);
+  border: 1px solid var(--neon-gold);
+  box-shadow: 
+    0 0 15px rgba(255, 215, 0, 0.3),
+    inset 0 0 10px rgba(0, 240, 255, 0.2);
+  backdrop-filter: blur(10px);
+}
+
+/* Animated Neon Text */
+h1, h2 {
+  text-shadow: 
+    0 0 5px var(--neon-gold),
+    0 0 15px rgba(255, 215, 0, 0.5);
+  animation: text-glow 2s infinite alternate;
+}
+
+@keyframes text-glow {
+  from { text-shadow: 0 0 5px var(--neon-gold); }
+  to { text-shadow: 0 0 15px var(--neon-gold); }
+}
