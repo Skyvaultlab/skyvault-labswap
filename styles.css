@@ -56,3 +56,52 @@ body {
   display: block;
   margin: 2rem auto;
 }
+/* Header Fix */
+.app-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+}
+
+.logo-container {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+/* Price Ticker Fix */
+.crypto-ticker {
+  background: rgba(0,0,0,0.7);
+  padding: 0.5rem;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.ticker-content {
+  display: inline-block;
+  animation: scroll 30s linear infinite;
+}
+
+@keyframes scroll {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+/* Swap Box Fix */
+.token-input {
+  margin: 1rem 0;
+}
+
+.input-group {
+  border: 1px solid #FFD700;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.swap-arrow {
+  text-align: center;
+  margin: 0.5rem 0;
+  color: #FFD700;
+  font-size: 1.5rem;
+}
