@@ -378,3 +378,17 @@ h1, h2 {
   from { text-shadow: 0 0 5px var(--neon-gold); }
   to { text-shadow: 0 0 15px var(--neon-gold); }
 }
+@media (max-width: 768px) {
+  .cyber-header {
+    flex-direction: column;
+  }
+  
+  .holo-panel {
+    transform: scale(0.9);
+  }
+  
+  /* Pulse animation for mobile */
+  .cyber-button::before {
+    animation: pulse 1.5s infinite;
+  }
+}
