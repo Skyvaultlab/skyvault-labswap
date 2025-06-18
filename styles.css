@@ -117,3 +117,23 @@ body {
   height: auto;
   width: 400px;     /* Max size */
 }
+/* Header fixes */
+.logo-title {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* Swap box borders */
+.token-input {
+  border: 1px solid #FFD700;
+  border-radius: 8px;
+  padding: 10px;
+  margin: 10px 0;
+}
+
+/* Single mascot display */
+.mascot-container {
+  text-align: center;
+  margin-top: 30px;
+}
