@@ -416,3 +416,80 @@
   </div>
 </div>
 <model-viewer src="scg-token.glb" ar></model-viewer>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SkyVault Labs | SCG Swap</title>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Minimalist Cyberpunk Header -->
+  <header class="cyber-header">
+    <div class="logo-container">
+      <img src="logo.png" alt="SkyVault" class="logo-hologram">
+      <h1>SKYVAULT</h1>
+    </div>
+    <button class="connect-btn" id="connect-wallet">
+      <span class="neon-pulse"></span>
+      CONNECT
+    </button>
+  </header>
+
+  <!-- Consolidated Crypto Ticker -->
+  <div class="ticker">
+    <div class="ticker-scroll">
+      <span>SCG/WMATIC: $0.0042 ▲2.4%</span>
+      <span>BTC: $64,280 ▲1.8%</span>
+      <span>ETH: $3,520 ▲0.9%</span>
+    </div>
+  </div>
+
+  <!-- Unified Swap Interface -->
+  <main class="swap-container">
+    <div class="swap-card">
+      <div class="input-group">
+        <label>YOU PAY</label>
+        <div class="input-field">
+          <input type="number" placeholder="0.0" id="pay-amount">
+          <div class="token-display">
+            <img src="SCG-coin.png" alt="SCG" class="token-icon">
+            <span>SCG</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="swap-arrow">↓</div>
+
+      <div class="output-group">
+        <label>YOU RECEIVE</label>
+        <div class="output-field">
+          <input type="number" placeholder="0.0" id="receive-amount" readonly>
+          <div class="token-display">
+            <img src="wmatic-icon.png" alt="WMATIC" class="token-icon">
+            <span>WMATIC</span>
+          </div>
+        </div>
+      </div>
+
+      <button class="swap-btn" id="swap-button">
+        EXECUTE SWAP
+      </button>
+    </div>
+
+    <!-- Mascot as Visual Anchor -->
+    <div class="mascot-display">
+      <img src="mascot.png" alt="SkyVault Mascot" class="mascot-hologram">
+    </div>
+  </main>
+
+  <!-- Single Footer -->
+  <footer class="cyber-footer">
+    <p>© 2025 SKYVAULT LABS</p>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
